@@ -1,2 +1,0 @@
-    maxCalculatorTest_cosim_sf.c
-

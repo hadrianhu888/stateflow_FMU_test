@@ -1,1 +1,0 @@
-var reportPages = [["Summary","maxCalculatorTest_grtfmi_v0_survey.html"],["Subsystem Report","maxCalculatorTest_grtfmi_v0_subsystems.html"],["Code Interface Report","maxCalculatorTest_grtfmi_v0_interface.html"]];

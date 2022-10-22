@@ -1,1 +1,0 @@
-var reportPages = [["Summary","maxCalculatorTest_survey.html"],["Subsystem Report","maxCalculatorTest_subsystems.html"]];

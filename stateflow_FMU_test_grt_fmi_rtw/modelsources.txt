@@ -1,2 +1,0 @@
-    stateflow_FMU_test.c
-

@@ -1,6 +1,0 @@
-#ifndef RTW_HEADER_stateflow_FMU_test_types_h_
-#define RTW_HEADER_stateflow_FMU_test_types_h_
-
-typedef struct tag_RTM_stateflow_FMU_test_T RT_MODEL_stateflow_FMU_test_T;
-
-#endif

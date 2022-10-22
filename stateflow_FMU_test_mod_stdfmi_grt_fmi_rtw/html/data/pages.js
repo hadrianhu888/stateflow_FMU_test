@@ -1,1 +1,0 @@
-var reportPages = [["Summary","stateflow_FMU_test_mod_stdfmi_survey.html"],["Subsystem Report","stateflow_FMU_test_mod_stdfmi_subsystems.html"],["Code Interface Report","stateflow_FMU_test_mod_stdfmi_interface.html"]];
