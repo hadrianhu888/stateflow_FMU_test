@@ -1,4 +1,4 @@
 #ignores the following patterns 
-"*/*"
-"*/"
-"*.zip"
+*/*
+*/
+*.zip
