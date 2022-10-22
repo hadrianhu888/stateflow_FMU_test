@@ -1,0 +1,12 @@
+        EXPORTS
+        stateflow_FMU_test_shrd_lib_M
+        stateflow_FMU_test_shrd_lib_U
+        stateflow_FMU_test_shrd_lib_Y
+    stateflow_FMU_test_shrd_lib_initialize
+            stateflow_FMU_test_shrd_lib_step
+        stateflow_FMU_test_shrd_lib_terminate
+
+
+                stateflow_FMU_test_shrd_lib_GetCAPIStaticMap
+
+

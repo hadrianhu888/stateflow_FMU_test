@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\GitHubRepos\stateflow_FMU_test\stateflow_FMU_test_mod_stdfmi_grt_fmi_rtw\CMakeFiles\2c4f95cce402ceb63487c8a8788b0a89\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{4AB690DC-43CB-373F-82A1-E1A3B403E6EB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

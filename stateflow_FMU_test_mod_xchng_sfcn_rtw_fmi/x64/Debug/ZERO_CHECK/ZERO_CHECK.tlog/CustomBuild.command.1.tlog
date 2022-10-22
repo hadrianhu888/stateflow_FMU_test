@@ -1,0 +1,10 @@
+^F:\GITHUBREPOS\STATEFLOW_FMU_TEST\STATEFLOW_FMU_TEST_MOD_XCHNG_SFCN_RTW_FMI\CMAKEFILES\FB5AFE418FC3874598F33D268329D8AF\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\Matlab\rtw\c\FMIKit-Simulink-3.0\cmake-3.22.2-windows-x86_64\bin\cmake.exe" "-SD:/Program Files/Matlab/rtw/c/FMIKit-Simulink-3.0/rtwsfcnfmi" -BF:/GitHubRepos/stateflow_FMU_test/stateflow_FMU_test_mod_xchng_sfcn_rtw_fmi --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/GitHubRepos/stateflow_FMU_test/stateflow_FMU_test_mod_xchng_sfcn_rtw_fmi/stateflow_FMU_test_mod_xchng.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,14 @@
+%implements s1_b0_uae3h_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<Root>/State Flow FMU Test' */
+#define stateflow_FMU_test_mod_IN_delay ((uint8_T)1U)
+#define stateflow_FMU_test_mod_IN_queue ((uint8_T)4U)
+#define stateflow_FMU_test_mod_IN_start ((uint8_T)5U)
+#define stateflow_FMU_test_mod__IN_wait ((uint8_T)6U)
+#define stateflow_FMU_test_mod_s_IN_off ((uint8_T)2U)
+#define stateflow_FMU_test_mod_st_IN_on ((uint8_T)3U)
+#define stateflow_FM_IN_NO_ACTIVE_CHILD ((uint8_T)0U)
+%endfunction

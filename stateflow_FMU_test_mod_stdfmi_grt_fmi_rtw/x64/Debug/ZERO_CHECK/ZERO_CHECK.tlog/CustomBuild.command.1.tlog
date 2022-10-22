@@ -1,0 +1,10 @@
+^F:\GITHUBREPOS\STATEFLOW_FMU_TEST\STATEFLOW_FMU_TEST_MOD_STDFMI_GRT_FMI_RTW\CMAKEFILES\2C4F95CCE402CEB63487C8A8788B0A89\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\Matlab\rtw\c\FMIKit-Simulink-3.0\cmake-3.22.2-windows-x86_64\bin\cmake.exe" "-SD:/Program Files/Matlab/rtw/c/FMIKit-Simulink-3.0/grtfmi" -BF:/GitHubRepos/stateflow_FMU_test/stateflow_FMU_test_mod_stdfmi_grt_fmi_rtw --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/GitHubRepos/stateflow_FMU_test/stateflow_FMU_test_mod_stdfmi_grt_fmi_rtw/stateflow_FMU_test_mod_stdfmi.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

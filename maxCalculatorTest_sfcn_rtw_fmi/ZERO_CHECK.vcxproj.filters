@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\GitHubRepos\stateflow_FMU_test\maxCalculatorTest_sfcn_rtw_fmi\CMakeFiles\a75c784d2ebd14b2787852c828a1be4c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F441F793-52AA-3544-997C-7F029C147376}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

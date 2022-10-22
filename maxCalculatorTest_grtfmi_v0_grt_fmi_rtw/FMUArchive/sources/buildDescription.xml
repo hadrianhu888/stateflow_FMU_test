@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiBuildDescription fmiVersion="3.0">
+
+  <BuildConfiguration modelIdentifier="maxCalculatorTest_grtfmi_v0">
+    <SourceFileSet>
+      <SourceFile name="fmi3Functions.c"/>
+        <SourceFile name="maxCalculatorTest_grtfmi_v0.c"/>
+        <SourceFile name="maxCalculatorTest_grtfmi_v0_capi.c"/>
+    </SourceFileSet>
+  </BuildConfiguration>
+
+</fmiBuildDescription>

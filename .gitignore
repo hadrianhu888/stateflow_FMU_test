@@ -1,3 +1,4 @@
 #ignores the following patterns 
 "*/*"
+"*/"
 "*.zip"

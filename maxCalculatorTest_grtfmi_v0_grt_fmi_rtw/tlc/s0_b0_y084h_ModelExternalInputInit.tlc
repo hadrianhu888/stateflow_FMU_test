@@ -1,0 +1,21 @@
+%implements s0_b0_y084h_ModelExternalInputInit "C"
+
+%function ModelExternalInputInit(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+(void)memset(&maxCalculatorTest_grtfmi_v0_U, 0, sizeof(ExtU_maxCalculatorTest_grtfmi_T));
+%<SLibCG_TrackEI(2)>\
+%<SLibCG_TrackEI(1)>\
+%<SLibCG_TrackEI(0)>\
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelExternalInputInitFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelExternalInputInit(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%endfunction

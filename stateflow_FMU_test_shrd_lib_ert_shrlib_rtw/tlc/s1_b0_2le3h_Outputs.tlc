@@ -1,0 +1,152 @@
+%implements s1_b0_2le3h_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCG_TrackEO(5)>\
+%<SLibCG_TrackEO(3)>\
+%<SLibCG_TrackEO(1)>\
+%<SLibCG_TrackEO(0)>\
+%<SLibCG_TrackEI(5)>\
+%<SLibCG_TrackEI(4)>\
+%<SLibCG_TrackEI(3)>\
+%<SLibCG_TrackEI(2)>\
+%<SLibCG_TrackEI(1)>\
+%<SLibCG_TrackEI(0)>\
+/* {S!d218}Chart: '<Root>/State Flow FMU Test' incorporates:
+ *  Inport: '<Root>/delayCode'
+ *  Inport: '<Root>/offCode'
+ *  Inport: '<Root>/onCode'
+ *  Inport: '<Root>/queueCode'
+ *  Inport: '<Root>/startCode'
+ *  Inport: '<Root>/waitCode'
+ */
+/* Gateway: State Flow FMU Test */
+/* During: State Flow FMU Test */
+/*@>296d*/if (/*@>69e4*/stateflow_FMU_test_shrd_lib_DW./*@>7159*/is_active_c3_stateflow_FMU_test/*@>296b*/ == /*@>4b57*/0U) {
+    /* Entry: State Flow FMU Test */
+    /*@>69f4*/stateflow_FMU_test_shrd_lib_DW./*@>715f*/is_active_c3_stateflow_FMU_test/*@>2979*/ = /*@>7030*/1U;
+    /* Entry Internal: State Flow FMU Test */
+    /* Transition: '<S1>:2' */
+    /*@>6a2c*/stateflow_FMU_test_shrd_lib_DW./*@>7174*/is_c3_stateflow_FMU_test_shrd_l/*@>2a11*/ = /*@>4ba9*/stateflow_FMU_test_shr_IN_start;
+    /* {S!d192}Outport: '<Root>/startState' */
+    /* Entry 'start': '<S1>:1' */
+    /*@>6996*/stateflow_FMU_test_shrd_lib_Y./*@>714d*/startState/*@>2a14*/ = /*@>4bbf*/1.0;
+    /* {S!d194}Outport: '<Root>/delayState' */
+    /*@>69ae*/stateflow_FMU_test_shrd_lib_Y./*@>7156*/delayState/*@>2a16*/ = /*@>4bc5*/1.0;
+} else {
+/*@>296e*/    switch (/*@>69ec*/stateflow_FMU_test_shrd_lib_DW./*@>715c*/is_c3_stateflow_FMU_test_shrd_l) {
+      case /*@>4b58*/stateflow_FMU_test_shr_IN_delay:
+        /* During 'delay': '<S1>:6' */
+        /*@>2995*/if (/*@>680c*/stateflow_FMU_test_shrd_lib_U./*@>7105*/delayCode/*@>29a2*/ == /*@>4bac*/0.0) {
+            /* Transition: '<S1>:16' */
+            /*@>6a04*/stateflow_FMU_test_shrd_lib_DW./*@>7165*/is_c3_stateflow_FMU_test_shrd_l/*@>299c*/ = /*@>4b6f*/stateflow_FMU_test_shrd_IN_wait;
+            /* {S!d200}Outport: '<Root>/waitState' */
+            /* Entry 'wait': '<S1>:5' */
+            /*@>6976*/stateflow_FMU_test_shrd_lib_Y./*@>7141*/waitState/*@>2a1f*/ = /*@>4bc1*/1.0;
+        } else /*@>2996*/if (/*@>684b*/stateflow_FMU_test_shrd_lib_U./*@>7120*/queueCode/*@>29a5*/ == /*@>4bb5*/1.0) {
+            /* Transition: '<S1>:18' */
+            /*@>6a3c*/stateflow_FMU_test_shrd_lib_DW./*@>717a*/is_c3_stateflow_FMU_test_shrd_l/*@>29a0*/ = /*@>4b72*/stateflow_FMU_test_shr_IN_queue;
+            /* Entry 'queue': '<S1>:7' */
+        }
+        break;
+      case /*@>4b59*/stateflow_FMU_test_shrd__IN_off:
+        /* During 'off': '<S1>:4' */
+        /*@>29a8*/if ((/*@>6814*/stateflow_FMU_test_shrd_lib_U./*@>7108*/startCode/*@>29b6*/ == /*@>4bad*/0.0)/*@>29b5*/ && (/*@>6819*/stateflow_FMU_test_shrd_lib_U./*@>710b*/offCode/*@>29b9*/ == /*@>4bae*/0.0)) {
+            /* Transition: '<S1>:12' */
+            /*@>6a0c*/stateflow_FMU_test_shrd_lib_DW./*@>7168*/is_c3_stateflow_FMU_test_shrd_l/*@>29af*/ = /*@>4b79*/stateflow_FMU_test_shr_IN_start;
+            /* {S!d202}Outport: '<Root>/startState' */
+            /* Entry 'start': '<S1>:1' */
+            /*@>697e*/stateflow_FMU_test_shrd_lib_Y./*@>7144*/startState/*@>2a23*/ = /*@>4bc2*/1.0;
+            /* {S!d204}Outport: '<Root>/delayState' */
+            /*@>69a6*/stateflow_FMU_test_shrd_lib_Y./*@>7153*/delayState/*@>2a25*/ = /*@>4bc7*/1.0;
+        } else /*@>29a9*/if (/*@>6853*/stateflow_FMU_test_shrd_lib_U./*@>7123*/onCode/*@>29bc*/ == /*@>4bb6*/1.0) {
+            /* Transition: '<S1>:22' */
+            /*@>6a44*/stateflow_FMU_test_shrd_lib_DW./*@>717d*/is_c3_stateflow_FMU_test_shrd_l/*@>29b3*/ = /*@>4b7c*/stateflow_FMU_test_shrd_l_IN_on;
+            /* {S!d206}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            /*@>699e*/stateflow_FMU_test_shrd_lib_Y./*@>7150*/onState/*@>2a35*/ = /*@>4bc6*/1.0;
+        }
+        break;
+      case /*@>4b5a*/stateflow_FMU_test_shrd_l_IN_on:
+        /* During 'on': '<S1>:3' */
+        /*@>29bf*/if ((/*@>6821*/stateflow_FMU_test_shrd_lib_U./*@>710e*/waitCode/*@>29cd*/ == /*@>4baf*/1.0)/*@>29cc*/ && (/*@>6826*/stateflow_FMU_test_shrd_lib_U./*@>7111*/onCode/*@>29d0*/ == /*@>4bb0*/1.0)) {
+            /* Transition: '<S1>:10' */
+            /*@>6a14*/stateflow_FMU_test_shrd_lib_DW./*@>716b*/is_c3_stateflow_FMU_test_shrd_l/*@>29c6*/ = /*@>4b85*/stateflow_FMU_test_shrd_IN_wait;
+            /* {S!d208}Outport: '<Root>/waitState' */
+            /* Entry 'wait': '<S1>:5' */
+            /*@>6986*/stateflow_FMU_test_shrd_lib_Y./*@>7147*/waitState/*@>2a2a*/ = /*@>4bc3*/1.0;
+        } else /*@>29c0*/if (/*@>685b*/stateflow_FMU_test_shrd_lib_U./*@>7126*/offCode/*@>29d3*/ == /*@>4bb7*/1.0) {
+            /* Transition: '<S1>:21' */
+            /*@>6a4c*/stateflow_FMU_test_shrd_lib_DW./*@>7180*/is_c3_stateflow_FMU_test_shrd_l/*@>29ca*/ = /*@>4b88*/stateflow_FMU_test_shrd__IN_off;
+            /* Entry 'off': '<S1>:4' */
+        } else {
+            /* {S!d210}Outport: '<Root>/onState' */
+            /*@>6938*/stateflow_FMU_test_shrd_lib_Y./*@>7135*/onState/*@>29d6*/ = /*@>4bbc*/1.0;
+        }
+        break;
+      case /*@>4b5b*/stateflow_FMU_test_shr_IN_queue:
+        /* During 'queue': '<S1>:7' */
+        /*@>29d9*/if (/*@>682e*/stateflow_FMU_test_shrd_lib_U./*@>7114*/queueCode/*@>29e6*/ == /*@>4bb1*/1.0) {
+            /* Transition: '<S1>:19' */
+            /*@>6a1c*/stateflow_FMU_test_shrd_lib_DW./*@>716e*/is_c3_stateflow_FMU_test_shrd_l/*@>29e0*/ = /*@>4b91*/stateflow_FMU_test_shr_IN_delay;
+            /* Entry 'delay': '<S1>:6' */
+        } else /*@>29da*/if (/*@>6863*/stateflow_FMU_test_shrd_lib_U./*@>7129*/offCode/*@>29e9*/ == /*@>4bb8*/1.0) {
+            /* Transition: '<S1>:23' */
+            /*@>6a54*/stateflow_FMU_test_shrd_lib_DW./*@>7183*/is_c3_stateflow_FMU_test_shrd_l/*@>29e4*/ = /*@>4b94*/stateflow_FMU_test_shrd__IN_off;
+            /* Entry 'off': '<S1>:4' */
+        }
+        break;
+      case /*@>4b5c*/stateflow_FMU_test_shr_IN_start:
+        /* During 'start': '<S1>:1' */
+        /*@>29ec*/if ((/*@>6836*/stateflow_FMU_test_shrd_lib_U./*@>7117*/startCode/*@>29fa*/ == /*@>4bb2*/1.0)/*@>29f9*/ && (/*@>683b*/stateflow_FMU_test_shrd_lib_U./*@>711a*/onCode/*@>29fd*/ == /*@>4bb3*/1.0)) {
+            /* Transition: '<S1>:8' */
+            /*@>6a24*/stateflow_FMU_test_shrd_lib_DW./*@>7171*/is_c3_stateflow_FMU_test_shrd_l/*@>29f3*/ = /*@>4b9b*/stateflow_FMU_test_shrd_l_IN_on;
+            /* {S!d212}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            /*@>698e*/stateflow_FMU_test_shrd_lib_Y./*@>714a*/onState/*@>2a2f*/ = /*@>4bc4*/1.0;
+        } else /*@>29ed*/if ((/*@>686b*/stateflow_FMU_test_shrd_lib_U./*@>712c*/offCode/*@>2a01*/ == /*@>4bb9*/1.0)/*@>2a00*/ && (/*@>6870*/stateflow_FMU_test_shrd_lib_U./*@>712f*/startCode/*@>2a04*/ == /*@>4bba*/0.0)) {
+            /* Transition: '<S1>:17' */
+            /*@>6a5c*/stateflow_FMU_test_shrd_lib_DW./*@>7186*/is_c3_stateflow_FMU_test_shrd_l/*@>29f7*/ = /*@>4b9e*/stateflow_FMU_test_shrd__IN_off;
+            /* Entry 'off': '<S1>:4' */
+        } else {
+            /* {S!d214}Outport: '<Root>/startState' */
+            /*@>6946*/stateflow_FMU_test_shrd_lib_Y./*@>7138*/startState/*@>2a07*/ = /*@>4bbd*/1.0;
+            /* {S!d216}Outport: '<Root>/delayState' */
+            /*@>6963*/stateflow_FMU_test_shrd_lib_Y./*@>713b*/delayState/*@>2a09*/ = /*@>4bbe*/1.0;
+        }
+        break;
+      default:
+        /* During 'wait': '<S1>:5' */
+        /*@>297b*/if ((/*@>67ff*/stateflow_FMU_test_shrd_lib_U./*@>70ff*/waitCode/*@>2989*/ == /*@>4baa*/1.0)/*@>2988*/ && (/*@>6804*/stateflow_FMU_test_shrd_lib_U./*@>7102*/onCode/*@>298c*/ == /*@>4bab*/0.0)) {
+            /* Transition: '<S1>:11' */
+            /*@>69fc*/stateflow_FMU_test_shrd_lib_DW./*@>7162*/is_c3_stateflow_FMU_test_shrd_l/*@>2982*/ = /*@>4b63*/stateflow_FMU_test_shrd_l_IN_on;
+            /* {S!d196}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            /*@>696e*/stateflow_FMU_test_shrd_lib_Y./*@>713e*/onState/*@>2a1b*/ = /*@>4bc0*/1.0;
+        } else /*@>297c*/if (/*@>6843*/stateflow_FMU_test_shrd_lib_U./*@>711d*/delayCode/*@>298f*/ == /*@>4bb4*/1.0) {
+            /* Transition: '<S1>:13' */
+            /*@>6a34*/stateflow_FMU_test_shrd_lib_DW./*@>7177*/is_c3_stateflow_FMU_test_shrd_l/*@>2986*/ = /*@>4b66*/stateflow_FMU_test_shr_IN_delay;
+            /* Entry 'delay': '<S1>:6' */
+        } else {
+            /* {S!d198}Outport: '<Root>/waitState' */
+            /*@>6927*/stateflow_FMU_test_shrd_lib_Y./*@>7132*/waitState/*@>2992*/ = /*@>4bbb*/1.0;
+        }
+        break;
+    }
+}
+/* {E!d218}End of Chart: '<Root>/State Flow FMU Test' */
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction

@@ -1,0 +1,10 @@
+^F:\GITHUBREPOS\STATEFLOW_FMU_TEST\MAXCALCULATORTEST_COSIM_SFCN_RTW_FMI\CMAKEFILES\CA29A51CFDB98AF1B07C90823E483DD5\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\Matlab\rtw\c\FMIKit-Simulink-3.0\cmake-3.23.2-windows-x86_64\bin\cmake.exe" "-SD:/Program Files/Matlab/rtw/c/FMIKit-Simulink-3.0/rtwsfcnfmi" -BF:/GitHubRepos/stateflow_FMU_test/maxCalculatorTest_cosim_sfcn_rtw_fmi --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/GitHubRepos/stateflow_FMU_test/maxCalculatorTest_cosim_sfcn_rtw_fmi/maxCalculatorTest_cosim.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

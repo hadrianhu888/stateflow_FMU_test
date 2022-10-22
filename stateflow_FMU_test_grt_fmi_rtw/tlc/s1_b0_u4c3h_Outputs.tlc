@@ -1,0 +1,152 @@
+%implements s1_b0_u4c3h_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCG_TrackEO(5)>\
+%<SLibCG_TrackEO(3)>\
+%<SLibCG_TrackEO(1)>\
+%<SLibCG_TrackEO(0)>\
+%<SLibCG_TrackEI(5)>\
+%<SLibCG_TrackEI(4)>\
+%<SLibCG_TrackEI(3)>\
+%<SLibCG_TrackEI(2)>\
+%<SLibCG_TrackEI(1)>\
+%<SLibCG_TrackEI(0)>\
+/* {S!d76}Chart: '<Root>/State Flow FMU Test' incorporates:
+ *  Inport: '<Root>/delayCode'
+ *  Inport: '<Root>/offCode'
+ *  Inport: '<Root>/onCode'
+ *  Inport: '<Root>/queueCode'
+ *  Inport: '<Root>/startCode'
+ *  Inport: '<Root>/waitCode'
+ */
+/* Gateway: State Flow FMU Test */
+/* During: State Flow FMU Test */
+if (stateflow_FMU_test_DW.is_active_c3_stateflow_FMU_test == 0U) {
+    /* Entry: State Flow FMU Test */
+    stateflow_FMU_test_DW.is_active_c3_stateflow_FMU_test = 1U;
+    /* Entry Internal: State Flow FMU Test */
+    /* Transition: '<S1>:2' */
+    stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_start;
+    /* {S!d50}Outport: '<Root>/startState' */
+    /* Entry 'start': '<S1>:1' */
+    stateflow_FMU_test_Y.startState = 1.0;
+    /* {S!d52}Outport: '<Root>/delayState' */
+    stateflow_FMU_test_Y.delayState = 1.0;
+} else {
+    switch (stateflow_FMU_test_DW.is_c3_stateflow_FMU_test) {
+      case stateflow_FMU_test_IN_delay:
+        /* During 'delay': '<S1>:6' */
+        if (stateflow_FMU_test_U.delayCode == 0.0) {
+            /* Transition: '<S1>:16' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_wait;
+            /* {S!d58}Outport: '<Root>/waitState' */
+            /* Entry 'wait': '<S1>:5' */
+            stateflow_FMU_test_Y.waitState = 1.0;
+        } else if (stateflow_FMU_test_U.queueCode == 1.0) {
+            /* Transition: '<S1>:18' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_queue;
+            /* Entry 'queue': '<S1>:7' */
+        }
+        break;
+      case stateflow_FMU_test_IN_off:
+        /* During 'off': '<S1>:4' */
+        if ((stateflow_FMU_test_U.startCode == 0.0) && (stateflow_FMU_test_U.offCode == 0.0)) {
+            /* Transition: '<S1>:12' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_start;
+            /* {S!d60}Outport: '<Root>/startState' */
+            /* Entry 'start': '<S1>:1' */
+            stateflow_FMU_test_Y.startState = 1.0;
+            /* {S!d62}Outport: '<Root>/delayState' */
+            stateflow_FMU_test_Y.delayState = 1.0;
+        } else if (stateflow_FMU_test_U.onCode == 1.0) {
+            /* Transition: '<S1>:22' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_on;
+            /* {S!d64}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            stateflow_FMU_test_Y.onState = 1.0;
+        }
+        break;
+      case stateflow_FMU_test_IN_on:
+        /* During 'on': '<S1>:3' */
+        if ((stateflow_FMU_test_U.waitCode == 1.0) && (stateflow_FMU_test_U.onCode == 1.0)) {
+            /* Transition: '<S1>:10' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_wait;
+            /* {S!d66}Outport: '<Root>/waitState' */
+            /* Entry 'wait': '<S1>:5' */
+            stateflow_FMU_test_Y.waitState = 1.0;
+        } else if (stateflow_FMU_test_U.offCode == 1.0) {
+            /* Transition: '<S1>:21' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_off;
+            /* Entry 'off': '<S1>:4' */
+        } else {
+            /* {S!d68}Outport: '<Root>/onState' */
+            stateflow_FMU_test_Y.onState = 1.0;
+        }
+        break;
+      case stateflow_FMU_test_IN_queue:
+        /* During 'queue': '<S1>:7' */
+        if (stateflow_FMU_test_U.queueCode == 1.0) {
+            /* Transition: '<S1>:19' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_delay;
+            /* Entry 'delay': '<S1>:6' */
+        } else if (stateflow_FMU_test_U.offCode == 1.0) {
+            /* Transition: '<S1>:23' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_off;
+            /* Entry 'off': '<S1>:4' */
+        }
+        break;
+      case stateflow_FMU_test_IN_start:
+        /* During 'start': '<S1>:1' */
+        if ((stateflow_FMU_test_U.startCode == 1.0) && (stateflow_FMU_test_U.onCode == 1.0)) {
+            /* Transition: '<S1>:8' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_on;
+            /* {S!d70}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            stateflow_FMU_test_Y.onState = 1.0;
+        } else if ((stateflow_FMU_test_U.offCode == 1.0) && (stateflow_FMU_test_U.startCode == 0.0)) {
+            /* Transition: '<S1>:17' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_off;
+            /* Entry 'off': '<S1>:4' */
+        } else {
+            /* {S!d72}Outport: '<Root>/startState' */
+            stateflow_FMU_test_Y.startState = 1.0;
+            /* {S!d74}Outport: '<Root>/delayState' */
+            stateflow_FMU_test_Y.delayState = 1.0;
+        }
+        break;
+      default:
+        /* During 'wait': '<S1>:5' */
+        if ((stateflow_FMU_test_U.waitCode == 1.0) && (stateflow_FMU_test_U.onCode == 0.0)) {
+            /* Transition: '<S1>:11' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_on;
+            /* {S!d54}Outport: '<Root>/onState' */
+            /* Entry 'on': '<S1>:3' */
+            stateflow_FMU_test_Y.onState = 1.0;
+        } else if (stateflow_FMU_test_U.delayCode == 1.0) {
+            /* Transition: '<S1>:13' */
+            stateflow_FMU_test_DW.is_c3_stateflow_FMU_test = stateflow_FMU_test_IN_delay;
+            /* Entry 'delay': '<S1>:6' */
+        } else {
+            /* {S!d56}Outport: '<Root>/waitState' */
+            stateflow_FMU_test_Y.waitState = 1.0;
+        }
+        break;
+    }
+}
+/* {E!d76}End of Chart: '<Root>/State Flow FMU Test' */
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction
